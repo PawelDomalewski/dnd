@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./src/stylesheet2v3.css">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1">
+</head>
+<title>Postacie RPG</title>
+<button onclick="topFunction()" id="myBtn" title="W górę">^</button>
+
+<body>
+    <div class="hero_header">
+        <h1 class="hero_header_text" id="strona_main">Postacie sesji RPG - Leśna Drużyna</h1>
+    </div>
+    <!-- <div class="menu_navi_bottom">
+        <nav>
+            <a href="#strona_main"><button>Strona główna</button></a>
+            <button class="drop_button">Postacie</button>
+            <a href="#"><button>O mnie</button></a>
+            <div class="dropdown_character">
+                <a href="#Vincent de'la Grande">Vincent de'la Grande</a>
+                <a href="#Leaf">Leaf</a>
+                <a href="#Milo">Milo</a>
+                <a href="#Matilda">Matilda</a>
+            </div>
+        </nav>-->
+    <div class="menu_top">
+        <ul id="menu_sticky">
+            <li><a href="#strona_main">Strona główna</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Postacie</a>
+                <div class="dropdown_postacie">
+                    <a href="#Vincent de'la Grande">Vincent de'la Grande</a>
+                    <a href="#Leaf">Leaf</a>
+                    <a href="#Milo">Milo</a>
+                    <a href="#Matilda">Matilda</a>
+                </div>
+            </li>
+            <li><a href="#O mnie">O mnie</a></li>
+        </ul>
+    </div>
+    <div class="character_image_selector">
+        <a href="#Vincent de'la Grande"><img class="character_image" src="./images/Vincent De La Grande1.png"
+                alt="Vincent" width="201" height="289" title="Paladyn"></a>
+        <a href="#Leaf"><img class="character_image" src="./images/Leaf.png" alt="Leaf" width="261" height="289"
+                title="Łowca"></a>
+        <a href="#Milo"><img class="character_image" src="./images/milo.png" alt="Milo" width="201" height="289"
+                title="Łotrzyk"></a>
+        <a href="#Matilda"><img class="character_image" src="./images/matilda.png" alt="Matilda" width="201"
+                height="289" title="Wojownik"></a>
+    </div>
+    </ul>
+    <div class="content">
+
+        <!--  <div class="main">-->
+        <h2>Historia</h2>
+        <p>Dawno, dawno temu, za siedmioma lasami i górami było sobie miasto. Miasto tak wspaniałe, że
+            nazywano je klejnotem północy. Neverwinter, centrum handlu i kultury, to właśnie w tym mieście
+            nasi bohaterowie się
+            poznali. Milo, Leaf, Nadia i Vincent de'la Grande zostali wynajęci przez krasnoluda imieniem
+            Gundren Rockseekers oraz przez Sildar Hallwintera. Mieli wyruszyć następnego dnia do Phandalin.
+            Nie spodziewali się, że ta podróż, pełna przygód, już na zawsze odmieni ich życie. Będą walczyć
+            w pocie czoła, oblani krwią, do ostatniego tchu. Będą chwile radości i śmiechu. Jak tez chwilę
+            grozy i smutku.</p>
+        <!-- </div>-->
+
+        <!-- <div class="historia_postaci"> -->
+        <h2 id="Vincent de'la Grande">Vincent de'la Grande</h2>
+        <p class="text"><img class="historia_postaci_Vincent" src="./images/Vincent De La Grande1.png"
+                alt="Vincent de'la Grande" width="201" height="289" title="Paladyn"><strong>Historia:</strong>
+            Vincent pochodzi z bogatej rodziny, która od pokoleń cieszyła się wielkimi
+            wpływami i koneksjami w zakonach paladyńskich. Swemu młodszemu synowi zapewnili najlepsze
+            wykształcenie.
+            Poznał techniki walki, filozofię prowadzenia wojen oraz teologię bóstw Fearunu. Jednkaże był w
+            cieniu swego starszego brata, który odnosił wiele sukcesów w służbie zakonu. Vincent zawsze obawiał
+            się, że będzie postrzegany wyłącznie przez pryzmat majątku swych rodziców.</p>
+
+        <h2 id="Leaf">Leaf</h2>
+        <p class="text"><img class="historia_postaci_Leaf" src="./images/Leaf.png" alt="Leaf" width="261" height="289"
+                title="Łowca"><strong>Historia postaci:</strong>
+            Leaf pochodzi z biednej rodziny, wielodzietnej. Nigdy nie dogadywała się z ludźmi. Pewnego dnia postanowiła
+            uciec z domu i żyć w lesie. Żyjąc w dziczy musiała nauczyć się wielu umiejętności,
+            które pozwoliły jej przetrwać. Zmagała się też goblinami które kręciły się w lesie i zaburzały naturalną
+            harmonię lasu.</p>
+        <br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+        <br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+        <br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+        <br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+        <br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+
+
+
+        <!--</div>-->
+    </div>
+</body>
+<script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("menu_sticky");
+    var sticky = navbar.offsetTop;
+    let mybutton = document.getElementById("myBtn");
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            mybutton.style.display = "block";
+        } else {
+            navbar.classList.remove("sticky");
+            mybutton.style.display = "none";
+        }
+    }
+
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+</script>
+
+</html>
