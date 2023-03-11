@@ -134,11 +134,13 @@ h2 {
 .historia_postaci_Vincent,
 .historia_postaci_milo {
     float:left;
+    margin-right: 1em;
 }
 
 .historia_postaci_Leaf,
 .historia_postaci_matilda {
     float:right;
+    margin-left: 1em;
 }
 
 .content {
